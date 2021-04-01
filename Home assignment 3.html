@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+
+    h3
+{
+  font-family: 'Staatliches', cursive;
+  color: #FFFFFF ;
+  text-align: center;
+  font-size: 50px;
+}
+
+    h2
+{
+  font-family: 'Permanent Marker', cursive;
+  color: grey ;
+  text-align: center;
+  font-size: 50px;
+}
+
+p
+{
+  color: white ;
+  font-size: 16px;
+  color: grey;
+}
+
+    h4
+{
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+
+ -moz-animation: example1 15s linear infinite;
+ -webkit-animation: example1 15s linear infinite;
+ animation: example1 15s linear infinite;
+}
+@-moz-keyframes example1 {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes example1 {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes example1 {
+ 0%   { 
+ -moz-transform: translateX(100%);
+ -webkit-transform: translateX(100%); 
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); 
+ -webkit-transform: translateX(-100%);
+ transform: translateX(-100%); 
+ }
+}
+
+a
+{
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f0bd3c;
+  border-radius: 50%;
+  border-top: 16px solid #d71f27;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+.container {
+  position: relative;
+  width: 65%;
+}
+
+
+
+.footer {
+   position: static;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 60%;
+}z
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  width: 4.5%
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  width: 4.5%
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  width: 4.5%
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+  width: 4.5%
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+  </style>
+
+  </head>
+
+  <body>
+    <body style="background-color: #000000">
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+   <nav class="navbar navbar-expand-sm bg-black navbar-white">
+  <a class="navbar-brand" href="Home assignment 3.html"><img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\Logo.png" width="100" height="100"></a>
+  <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+  <ul class="navbar-nav ml-auto">
+
+    <li class="nav-item active">
+      <a class="nav-link" href="Home assignment 3.html">About me</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Branding.html">Work</a>
+    </li>
+
+  </ul>
+</nav>
+
+
+  <div class="w3-container w3-center w3-animate-opacity">
+    <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\Ava.jpg" width="100%" height="100%">
+      <br>
+      <br>
+       <br>
+      <br>
+      <div class="carousel-caption">
+        
+</div>
+<div class="container">
+<h3>Dung Baka</h3>
+<br>
+<br>
+        <p>I started my journey to become a designer at FPT University. From the basic knowledge and learning from practical
+      work experience I have cultivated many skills. Graphic design includes many different fields such as: Animation 2D, 3D;
+        Branding; Video Editing; ... I have chosen for myself the path to Branding. Design is always updated every day so I also
+       have to learn every day to become more proficient. I am a fast learner hard at work. And always responsible for the work assigned.
+        Always try to learn from seniors to hone more skills such as social knowledge.</p>
+      </div>
+    </div>
+
+<br>
+<br>
+<div class="container">
+ <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Photoshop</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:65%"></div>
+    </div>
+    <p class="w3-wide">Illustration</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Indesign</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
+    </div>
+  <p class="w3-wide">After Effect</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:65%"></div>
+    </div>
+    <p class="w3-wide">Maya</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:60%"></div>
+    </div>
+    <br>
+  </div>
+<br>
+<br>
+
+<h3 style="text-align: center;">Education & Experience</h3>
+<br>
+    <div class="container">
+    <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\FPT.png"alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">FPT University.</span> Graphic Design Major.</p>
+    <p>Study from 2017 to 2021.</p><br>
+    
+    <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\JAI.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">JAI Creative Digital Agency.</span> Brand design and marketing publications.</p>
+    <p>Worked for 6 months.</p>
+  </div>
+
+
+
+    <br>
+    <br>
+    <br>
+
+<h3 style="text-align: center;">Hobbies</h3>
+  <div class="container">  
+    <div class="row">
+      <div class="col">
+        <img style="margin-left: 50px" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\movie.png" width="200" height="200">
+        <br>
+        <br>
+        <h4>Movie</h4>
+         <p style="text-align: center;">Horror, Science fiction, Action.</p>
+      </div>
+      
+      
+        <div class="col">
+          <img style="margin-left: 50px" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\animal.png" width="200" height="200">
+        <br>
+        <br>
+        <h4>Animal</h4>
+         <p style="text-align: center;">Pets and Mammals.</p>
+        </div>
+
+    
+        <div class="col">
+          <img style="margin-left: 50px" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\game.png" width="200" height="200">
+        <br>
+        <br>
+        <h4>Game</h4>
+         <p style="text-align: center;">Survival, Adventure, Role-playing.</p>
+        </div>
+      </div>
+
+
+
+
+<div class="w3-container w3-padding-64 w3-black w3-center w3-wide" id="rsvp">
+  <h3>CONTACT ME</h3>
+  <br>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Contact</button>
+  </p>
+</div>
+
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">Contact me</h1>
+      
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
+        <input class="w3-input w3-border" type="text" placeholder="Country" name="name">
+        <input class="w3-input w3-border" type="text" placeholder="Message" name="name">
+
+      </form>
+      <br>
+      <div class="w3-row">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<br>
+<br>
+<br>
+    <div class="footer">
+  <br>
+  <a href="https://www.facebook.com/dung.ace.1" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/" class="fa fa-twitter"></a>
+  <a href="https://www.instagram.com/bakadung/" class="fa fa-instagram"></a>
+  <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+  <br>
+
+  <h6>dungvdha130054</h6>
+</div> 
+    
+    
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+

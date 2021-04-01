@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <style>
+
+    h3
+{
+  font-family: 'Staatliches', cursive;
+  color: #FFFFFF ;
+  text-align: center;
+  font-size: 50px;
+}
+
+    h2
+{
+  font-family: 'Permanent Marker', cursive;
+  color: grey ;
+  text-align: center;
+  font-size: 50px;
+}
+
+p
+{
+  color: white ;
+  font-size: 16px;
+  color: grey;
+}
+
+    h4
+{
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+
+a
+{
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+.container {
+  position: relative;
+  width: 65%;
+}
+
+
+
+.footer {
+   position: static;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 60%;
+}z
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  width: 4.5%
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  width: 4.5%
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+  width: 4.5%
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+  width: 4.5%
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+  </style>
+
+  </head>
+
+  <body>
+    <body style="background-color: #000000">
+
+}
+</script>
+
+  <nav class="navbar navbar-expand-sm bg-black navbar-dark">
+  <a class="navbar-brand" href="Home assignment 3.html"><img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\Logo.png" width="100" height="100"></a>
+
+  <ul class="navbar-nav ml-auto">
+
+    <li class="nav-item active">
+      <a class="nav-link" href="Home assignment 3.html">About me</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="Branding.html">Work</a>
+  </li>
+</ul>
+</nav>
+
+
+
+<section>
+<h3 class="w3-padding-16 w3-text-light-grey">Logo design</h3>
+
+
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD1.jpg" style="width:102%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD2.jpg" style="width:102%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD3.jpg" style="width:102%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD4.jpg" style="width:102%">
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD1.jpg" style="width:100%" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD2.jpg" style="width:100%" onclick="currentSlide(2)">
+     </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD3.jpg" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\HIBD4.jpg" style="width:100%" onclick="currentSlide(4)">
+    </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</div>
+</div>
+</section>
+
+<br>
+<br>
+<br>
+  <div class="container">  
+    <div class="row">
+      <div class="col">
+        <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\Sfood1.jpg" width="460" height="330">
+       
+      </div>
+      
+      
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\Sfood2.jpg" width="460" height="330">
+       
+        </div>
+    </div>
+    <br>
+
+
+     <div class="row">
+      <div class="col">
+        <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\Sfood3.jpg" width="460" height="330">
+       
+      </div>
+      
+      
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\Sfood4.jpg" width="460" height="330">
+       
+        </div>
+    </div>
+
+    <br>
+
+        <div class="row">
+      <div class="col">
+        <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\hilink 1.jpg" width="460" height="330">
+       
+      </div>
+    
+      
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\hilink 2.jpg" width="460" height="330">
+       
+        </div>
+
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col">
+        <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\hilink 3.jpg" width="460" height="330">
+       
+      </div>
+      
+      
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\hilink 4.jpg" width="460" height="330">
+       
+        </div>
+    </div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+    <h3 class="w3-padding-16 w3-text-light-grey">Packaging</h3>
+
+    <div class="row">
+      <div class="col">
+        <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack3.png" width="290" height="290">
+       
+      </div>
+      
+      
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack4.png" width="290" height="290">
+       
+        </div>
+
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack5.png" width="290" height="290">
+       
+        </div>
+    </div>
+
+
+    <br>
+    <br>
+
+     <div class="row">
+      <div class="col">
+        <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack6.png" width="460" height="330">
+       
+      </div>
+      
+      
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack7.png" width="460" height="330">
+       
+        </div>
+       </div>
+        <br>
+    <br>
+
+     <div class="row">
+      <div class="col">
+        <img style="margin-left: 130px" src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack8.png" width="720" height="500">
+       
+      </div>
+  </div>
+
+
+  <br>
+    <br>
+
+     <div class="row">
+      <div class="col">
+        <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack9.png" width="460" height="330">
+       
+      </div>
+      
+      
+        <div class="col">
+          <img src="C:\Users\fptshop\Desktop\WDT401-GD1402\Assign3 source\pack10.png" width="460" height="330">
+       
+        </div>
+       </div>
+
+
+
+    <br>
+<br>
+<br>
+<br>
+<br>
+    <div class="footer">
+  <br>
+  <a href="https://www.facebook.com/dung.ace.1" class="fa fa-facebook"></a>
+  <a href="https://twitter.com/" class="fa fa-twitter"></a>
+  <a href="https://www.instagram.com/bakadung/" class="fa fa-instagram"></a>
+  <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+  <br>
+
+  <h6>dungvdha130054</h6>
+</div> 
+
